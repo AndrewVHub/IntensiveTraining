@@ -1,9 +1,22 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="Base.Theme.IntensiveTraining" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.IntensiveTraining" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/background_primary</item>
     </style>
 
-    <style name="Theme.IntensiveTraining" parent="Base.Theme.IntensiveTraining" />
+    <style name="Theme.IntensiveTraining" parent="Base.Theme.IntensiveTraining" >
+        <item name="toolbarStyle">@style/Theme.IntensiveTraining.Toolbar</item>
+        <item name="android:statusBarColor">@color/Bg_page_1</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.IntensiveTraining.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="navigationIcon">@null</item>
+        <item name="android:gravity">start</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="titleTextAppearance">@style/Headline_3_1</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="titleMarginStart">0dp</item>
+    </style>
 </resources>
