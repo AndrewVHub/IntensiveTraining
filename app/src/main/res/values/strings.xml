@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">IntensiveTraining</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment_title">Программы</string>
 </resources>
