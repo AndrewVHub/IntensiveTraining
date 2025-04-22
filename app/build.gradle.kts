@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.parcelize)
+    alias(libs.plugins.safeArgs)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -8,6 +11,7 @@ android {
     compileSdk = 35
 
     viewBinding.enable = true
+    buildFeatures.buildConfig = true
 
     defaultConfig {
         applicationId = "ru.andrewvhub.intensivetraining"
@@ -21,10 +25,14 @@ android {
 
     buildTypes {
 
+        val baseUrl = "API_BASE_URL"
+
         debug {
             isMinifyEnabled = false
             isDebuggable = true
             resValue("string", "app_name", "Intensive Training Debug")
+
+            buildConfigField("String", baseUrl, "\"https://ref.test.kolsa.ru/\"")
         }
 
         release {
@@ -54,6 +62,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.core.animation)
 
     //Lifecycle
     implementation(libs.androidx.lifecycle.runtime)
@@ -92,4 +101,11 @@ dependencies {
 
     //OkHttp3
     implementation(libs.logging.interceptor)
+
+    //Chucker for checking HTTP
+    implementation (libs.chucker)
+    implementation(kotlin("reflect"))
+
+    //SwipeRefreshLayout
+    implementation(libs.androidx.swipeRefreshLayout)
 }

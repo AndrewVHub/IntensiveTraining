@@ -10,7 +10,7 @@ import ru.andrewvhub.utils.adapter.Adapter
 
 val uiModule = module {
 
-    viewModel { HomeViewModel() }
+    viewModel { HomeViewModel(get()) }
 
     factory<DiffUtil.ItemCallback<Item>> { ItemCallback() }
     factory { Adapter(get()) }
