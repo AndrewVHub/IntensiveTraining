@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">IntensiveTraining</string>
 
+    <string name="common_training_min">%d мин</string>
+    <string name="common_error">Ошибка</string>
+    <string name="common_unknown_error">Неизвестная ошибка</string>
+
+    <string name="training_type_cardio">Кардио</string>
+    <string name="training_type_strength">Силовая</string>
+    <string name="training_type_pilates">Пилатес</string>
+    <string name="training_type_unknown">Неизвестно</string>
+
     <string name="home_fragment_title">Программы</string>
+    <string name="home_fragment_search_hint">Поиск</string>
+    <string name="home_fragment_not_found_text">Ничего не найдено</string>
+    <string name="home_fragment_reset_filters_text">Сбросить фильтры</string>
+
+
+    <string-array name="categories">
+        <item>Все</item>
+        <item>Кардио</item>
+        <item>Силовая</item>
+        <item>Пилатес</item>
+    </string-array>
 </resources>

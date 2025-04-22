@@ -6,7 +6,10 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.fragment.koin.fragmentFactory
 import org.koin.core.context.startKoin
 import ru.andrewvhub.intensivetraining.di.appModule
+import ru.andrewvhub.intensivetraining.di.netModule
+import ru.andrewvhub.intensivetraining.di.repositoryModule
 import ru.andrewvhub.intensivetraining.di.uiModule
+import ru.andrewvhub.intensivetraining.di.useCaseModule
 
 class App : Application() {
     override fun onCreate() {
@@ -18,7 +21,10 @@ class App : Application() {
             fragmentFactory()
             modules(
                 uiModule,
-                appModule
+                appModule,
+                netModule,
+                repositoryModule,
+                useCaseModule
             )
         }
     }

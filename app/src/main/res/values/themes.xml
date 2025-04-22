@@ -19,4 +19,63 @@
         <item name="contentInsetStartWithNavigation">0dp</item>
         <item name="titleMarginStart">0dp</item>
     </style>
+
+    <style name="Button">
+        <item name="fontFamily">@font/mulish_700</item>
+        <item name="android:textSize">11sp</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <!--  Widget Style -->
+    <style name="Widget" />
+
+    <style name="Widget.SelectableChips" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay12</item>
+        <item name="android:textAppearance">@style/Button_2</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="chipBackgroundColor">@color/chip_color_background_state</item>
+        <item name="android:textColor">@color/chip_color_text_state</item>
+    </style>
+
+    <style name="Widget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.IntensiveTraining.TextInputLayout</item>
+        <item name="hintTextColor">@color/gray_chip</item>
+        <item name="android:textColorHint">@color/gray_chip</item>
+    </style>
+
+    <style name="ThemeOverlay.IntensiveTraining.TextInputLayout" parent="">
+        <item name="colorControlActivated">@color/gray_chip</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:maxHeight">56dp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textColorHighlight">@color/white</item>
+    </style>
+
+    <style name="Widget.EditText">
+        <item name="android:textAppearance">@style/Text_1</item>
+        <item name="android:textColor">@color/background_primary</item>
+        <item name="android:background">@drawable/bg_box_12</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">25dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="Widget.Button" parent="@style/Widget.Material3.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay12</item>
+        <item name="android:textAppearance">@style/Button_1</item>
+        <item name="elevation">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="background">?selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.Button.GrayButton" parent="Widget.Button">
+        <item name="backgroundTint">@color/gray_chip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
 </resources>

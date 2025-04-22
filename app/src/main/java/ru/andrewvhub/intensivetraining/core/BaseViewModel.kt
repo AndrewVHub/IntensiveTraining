@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import ru.andrewvhub.utils.SingleLiveEvent
+import ru.andrewvhub.utils.extension.getMessageFromThrowable
 import timber.log.Timber
 
 abstract class BaseViewModel : ViewModel(), KoinComponent {
@@ -20,8 +21,7 @@ abstract class BaseViewModel : ViewModel(), KoinComponent {
     private val _mainNavigate = SingleLiveEvent<NavDirections>()
     val mainNavigate: LiveData<NavDirections> = _mainNavigate
 
-    //TODO(На будущее)
-//    fun Throwable.handleThrowable() = resources.getMessageFromThrowable(this)
+    fun Throwable.handleThrowable() = resources.getMessageFromThrowable(this)
 
     fun mainNavigate(destination: NavDirections) {
         _mainNavigate.value = destination
