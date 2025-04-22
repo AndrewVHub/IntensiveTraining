@@ -3,10 +3,10 @@ package ru.andrewvhub.intensivetraining.ui.items
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import ru.andrewvhub.intensivetraining.core.BaseViewHolder
-import ru.andrewvhub.intensivetraining.databinding.ItemCategoryBinding
 import ru.andrewvhub.intensivetraining.databinding.ItemEmptyBinding
+import ru.andrewvhub.intensivetraining.databinding.ItemRadioButtonPickerBinding
 import ru.andrewvhub.intensivetraining.databinding.ItemTrainingCardBinding
-import ru.andrewvhub.intensivetraining.ui.viewHolders.CategoryViewHolder
+import ru.andrewvhub.intensivetraining.ui.viewHolders.RadioButtonTextViewHolder
 import ru.andrewvhub.intensivetraining.ui.viewHolders.SimpleViewHolder
 import ru.andrewvhub.intensivetraining.ui.viewHolders.TrainingCardViewHolder
 
@@ -27,10 +27,10 @@ enum class ItemContentType {
                 )
             )
     },
-    CategoryItemType {
+    RadioButtonTextItemType {
         override fun onCreateViewHolder(parent: ViewGroup): BaseViewHolder<*> =
-            CategoryViewHolder(
-                ItemCategoryBinding.inflate(
+            RadioButtonTextViewHolder(
+                ItemRadioButtonPickerBinding.inflate(
                     LayoutInflater.from(parent.context),
                     parent,
                     false

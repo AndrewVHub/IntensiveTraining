@@ -2,7 +2,7 @@ package ru.andrewvhub.intensivetraining.ui.items
 
 data class TrainingItem(
     override val id: String,
-    val icon: String,
+    val image: String,
     val time: String,
     val type: String,
     val description: String,

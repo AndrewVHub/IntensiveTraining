@@ -76,6 +76,19 @@
     <style name="Widget.Button.GrayButton" parent="Widget.Button">
         <item name="backgroundTint">@color/gray_chip</item>
         <item name="android:textColor">@color/white</item>
-        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.Button.Transparent" parent="Widget.Button">
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="android:textColor">@color/gray_chip</item>
+    </style>
+
+    <style name="Widget.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@null</item>
+        <item name="android:textColor">@color/Text_1</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="buttonCompat">@drawable/radio_button_state</item>
+        <item name="android:textAppearance">@style/Text_1</item>
     </style>
 </resources>
