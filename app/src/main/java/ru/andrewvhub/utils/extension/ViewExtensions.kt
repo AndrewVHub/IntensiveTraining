@@ -42,11 +42,6 @@ fun View.addSystemTopSpace(isPadding: Boolean, targetView: View = this) {
     }
 }
 
-enum class SystemSpaceTypes(val typeMask: Int) {
-    BARS(WindowInsetsCompat.Type.systemBars()),
-    BARS_AND_KEYBOARD(WindowInsetsCompat.Type.systemBars() + WindowInsetsCompat.Type.ime())
-}
-
 fun View.addSystemBottomSpace(
     isPadding: Boolean,
     targetView: View = this,

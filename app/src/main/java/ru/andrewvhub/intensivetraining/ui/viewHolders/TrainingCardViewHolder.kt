@@ -46,7 +46,7 @@ class TrainingCardViewHolder(private val viewBinding: ItemTrainingCardBinding) :
     }
 
     private fun updateIcon(item: TrainingItem): Unit = with(viewBinding) {
-        trainingIcon.load(item.icon)
+        trainingImage.load(item.image)
     }
 
     private fun updateType(item: TrainingItem): Unit = with(viewBinding) {

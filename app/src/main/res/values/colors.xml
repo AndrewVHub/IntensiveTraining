@@ -8,6 +8,8 @@
 
     <color name="background_primary">#1D1D1D</color>
     <color name="gray_chip">#58595B</color>
+
+    <color name="Text_1">#28232E</color>
     <color name="Text_2">#8C9397</color>
 
     <color name="Bg_page_1">#FBF8FF</color>

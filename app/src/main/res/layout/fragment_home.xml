@@ -40,16 +40,30 @@
                 tools:text="Лучше живот от пива, чем горб от работы" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/categoryRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        <ImageView
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_medium"
-            android:clipToPadding="false"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="@+id/searchLayout"
-            tools:listitem="@layout/item_category" />
+            android:layout_marginEnd="@dimen/space_common_side"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchLayout"
+            tools:ignore="ContentDescription"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <TextView
+            android:id="@+id/currentFilterValue"
+            style="@style/Subtitle_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_common_side"
+            android:textColor="@color/Text_2"
+            app:layout_constraintBottom_toBottomOf="@+id/filterButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/filterButton"
+            tools:text="Выбранный фильтр: Бегит качат пресс" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/exercisesRecyclerView"
@@ -60,7 +74,7 @@
             android:paddingBottom="30dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/categoryRecyclerView" />
+            app:layout_constraintTop_toBottomOf="@+id/filterButton" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/loader"
@@ -71,7 +85,7 @@
             app:layout_constraintDimensionRatio="1:0.93"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/categoryRecyclerView"
+            app:layout_constraintTop_toBottomOf="@id/filterButton"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/bottle_animation" />

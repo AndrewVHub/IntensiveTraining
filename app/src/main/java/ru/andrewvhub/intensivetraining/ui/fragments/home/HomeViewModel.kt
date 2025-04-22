@@ -15,40 +15,23 @@ import ru.andrewvhub.intensivetraining.ui.items.TrainingItem
 import ru.andrewvhub.utils.SingleLiveEvent
 
 
-private const val DEFAULT_CATEGORY = "Все"
-private const val DEFAULT_INDEX_CATEGORY = 0
+const val DEFAULT_CATEGORY = "Все"
+
 class HomeViewModel(
     private val getTrainingsUseCase: GetTrainingsUseCase
 ):BaseViewModel() {
 
     private val _allTrainingsFlow = MutableStateFlow<List<Training>>(emptyList())
     private val _searchTextFlow = MutableStateFlow("")
-    private val _selectedTypeFlow = MutableStateFlow<String?>(DEFAULT_CATEGORY)
-    private val _currentIndexCategoryFlow = MutableStateFlow<Int?>(null)
-    val currentIndexCategoryFlow = _currentIndexCategoryFlow.asStateFlow()
+
+    private val _selectedTypeFlow = MutableStateFlow(DEFAULT_CATEGORY)
+    val selectedTypeFlow = _selectedTypeFlow.asStateFlow()
 
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
     private val _errorMessage = SingleLiveEvent<String>()
     val errorMessage: LiveData<String> = _errorMessage
-
-//    val filteredTrainings: Flow<List<TrainingItem>> = combine(
-//        _allTrainingsFlow,
-//        _searchTextFlow,
-//        _selectedTypeFlow
-//    ) { trainings, searchText, selectedType ->
-//        if (selectedType == DEFAULT_CATEGORY) {
-//            return@combine trainings.filter {
-//                it.title?.contains(searchText, ignoreCase = true) ?: false
-//            }.map { it.toItem() }
-//        }
-//        trainings.filter {
-//            it.title?.contains(searchText, ignoreCase = true) ?: false  &&
-//                    (selectedType == null
-//                            || resources.getString(it.type.nameResId) == selectedType)
-//        }.map { it.toItem() }
-//    }
 
     private fun filterByTitle(training: Training, searchText: String): Boolean {
         return training.title?.contains(searchText, ignoreCase = true) ?: false
@@ -89,15 +72,12 @@ class HomeViewModel(
         _searchTextFlow.value = text
     }
 
-    fun onSelectType(index: Int, text: String) {
+    fun onSelectType(text: String) {
         _selectedTypeFlow.value = text
-        _currentIndexCategoryFlow.value = index
     }
 
     fun resetFilters() {
         _selectedTypeFlow.value = DEFAULT_CATEGORY
-        _currentIndexCategoryFlow.value = DEFAULT_INDEX_CATEGORY
-
     }
 
     private fun Training.toItem() = TrainingItem (
@@ -106,9 +86,17 @@ class HomeViewModel(
         description = description.orEmpty(),
         type = resources.getString(type.nameResId),
         time = resources.getString(R.string.common_training_min, duration),
-        icon = "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image = image,
         onClick = {
 
         }
     )
+
+    fun navigateToSelectFilter() {
+        mainNavigate(
+            HomeFragmentDirections.actionHomeFragmentToSelectFilterBottomSheetFragment(
+                _selectedTypeFlow.value
+            )
+        )
+    }
 }

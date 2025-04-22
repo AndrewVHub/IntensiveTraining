@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/trainingIcon"
+        android:id="@+id/trainingImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -24,10 +24,10 @@
         android:layout_height="0dp"
         android:backgroundTint="@color/half_black"
         android:background="@drawable/bg_box_16"
-        app:layout_constraintBottom_toBottomOf="@id/trainingIcon"
-        app:layout_constraintEnd_toEndOf="@id/trainingIcon"
-        app:layout_constraintStart_toStartOf="@id/trainingIcon"
-        app:layout_constraintTop_toTopOf="@id/trainingIcon" />
+        app:layout_constraintBottom_toBottomOf="@id/trainingImage"
+        app:layout_constraintEnd_toEndOf="@id/trainingImage"
+        app:layout_constraintStart_toStartOf="@id/trainingImage"
+        app:layout_constraintTop_toTopOf="@id/trainingImage" />
 
     <TextView
         android:id="@+id/trainingTime"
@@ -42,7 +42,7 @@
         android:paddingVertical="4dp"
         android:textColor="@color/white"
         app:drawableStartCompat="@drawable/ic_camera"
-        app:layout_constraintBottom_toBottomOf="@id/trainingIcon"
+        app:layout_constraintBottom_toBottomOf="@id/trainingImage"
         app:layout_constraintStart_toStartOf="@id/startGuideline"
         tools:text="59 мин" />
 
@@ -58,7 +58,7 @@
         android:paddingHorizontal="8dp"
         android:paddingVertical="4dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/trainingIcon"
+        app:layout_constraintBottom_toBottomOf="@id/trainingImage"
         app:layout_constraintStart_toEndOf="@+id/trainingTime"
         tools:text="кардио" />
 
