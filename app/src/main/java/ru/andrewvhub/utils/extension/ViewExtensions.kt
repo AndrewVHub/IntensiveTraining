@@ -45,10 +45,10 @@ fun View.addSystemTopSpace(isPadding: Boolean, targetView: View = this) {
 fun View.addSystemBottomSpace(
     isPadding: Boolean,
     targetView: View = this,
-    type: SystemSpaceTypes = SystemSpaceTypes.BARS
+    type: Int = WindowInsetsCompat.Type.systemBars()
 ) {
     doOnApplyWindowInsets(isPadding) { _, windowInsets, spaces ->
-        val insets = windowInsets.getInsets(type.typeMask)
+        val insets = windowInsets.getInsets(type)
 
         if (isPadding) {
             targetView.updatePadding(bottom = spaces.bottom + insets.bottom)
@@ -57,7 +57,7 @@ fun View.addSystemBottomSpace(
         }
 
         WindowInsetsCompat.Builder(windowInsets).setInsets(
-            type.typeMask,
+            type,
             Insets.of(
                 insets.left,
                 insets.top,

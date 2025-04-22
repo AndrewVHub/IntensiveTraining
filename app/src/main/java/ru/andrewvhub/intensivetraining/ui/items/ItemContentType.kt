@@ -3,7 +3,6 @@ package ru.andrewvhub.intensivetraining.ui.items
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import ru.andrewvhub.intensivetraining.core.BaseViewHolder
-import ru.andrewvhub.intensivetraining.databinding.ItemCategoryBinding
 import ru.andrewvhub.intensivetraining.databinding.ItemEmptyBinding
 import ru.andrewvhub.intensivetraining.databinding.ItemRadioButtonPickerBinding
 import ru.andrewvhub.intensivetraining.databinding.ItemTrainingCardBinding
