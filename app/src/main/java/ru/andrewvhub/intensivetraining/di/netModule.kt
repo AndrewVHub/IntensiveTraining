@@ -16,7 +16,7 @@ import ru.andrewvhub.intensivetraining.api.ErrorInterceptor
 
 val netModule = module {
     single<Api> {
-        val gsonDateConverter: Gson = GsonBuilder()
+        val durationConverter: Gson = GsonBuilder()
             .registerTypeAdapterFactory(DurationRandomFallbackTypeAdapterFactory())
             .create()
 
@@ -41,7 +41,7 @@ val netModule = module {
         Retrofit.Builder()
             .baseUrl(BuildConfig.API_BASE_URL)
             .client(clientToWrap)
-            .addConverterFactory(GsonConverterFactory.create(gsonDateConverter))
+            .addConverterFactory(GsonConverterFactory.create(durationConverter))
             .build().create(Api::class.java)
     }
 }
