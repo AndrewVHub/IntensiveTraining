@@ -13,11 +13,13 @@
         <action
             android:id="@+id/action_homeFragment_to_selectFilterBottomSheetFragment"
             app:destination="@id/selectFilterBottomSheetFragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim" />
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
         <action
             android:id="@+id/action_homeFragment_to_detailTrainingFragment"
             app:destination="@id/detailTrainingFragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim" />
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <dialog
         android:id="@+id/selectFilterBottomSheetFragment"
@@ -36,5 +38,19 @@
         <argument
             android:name="trainingDetail"
             app:argType="ru.andrewvhub.intensivetraining.data.models.Training" />
+        <action
+            android:id="@+id/action_detailTrainingFragment_to_trainingVideoPlayerFragment"
+            app:destination="@id/trainingVideoPlayerFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingVideoPlayerFragment"
+        android:name="ru.andrewvhub.intensivetraining.ui.fragments.trainingVideoPlayer.TrainingVideoPlayerFragment"
+        android:label="fragment_training_video_player"
+        tools:layout="@layout/fragment_training_video_player" >
+        <argument
+            android:name="idVideo"
+            app:argType="integer" />
     </fragment>
 </navigation>

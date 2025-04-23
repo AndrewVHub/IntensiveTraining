@@ -14,7 +14,6 @@ import ru.andrewvhub.intensivetraining.domain.useCase.GetTrainingsUseCase
 import ru.andrewvhub.intensivetraining.ui.items.TrainingItem
 import ru.andrewvhub.utils.SingleLiveEvent
 
-
 const val DEFAULT_CATEGORY = "Все"
 
 class HomeViewModel(
@@ -100,7 +99,7 @@ class HomeViewModel(
         )
     }
 
-    fun navigateToDetailTraining(training: Training) {
+    private fun navigateToDetailTraining(training: Training) {
         mainNavigate(
             HomeFragmentDirections.actionHomeFragmentToDetailTrainingFragment(training)
         )

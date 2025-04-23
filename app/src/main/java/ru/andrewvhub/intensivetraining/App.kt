@@ -10,10 +10,16 @@ import ru.andrewvhub.intensivetraining.di.netModule
 import ru.andrewvhub.intensivetraining.di.repositoryModule
 import ru.andrewvhub.intensivetraining.di.uiModule
 import ru.andrewvhub.intensivetraining.di.useCaseModule
+import timber.log.Timber
+import timber.log.Timber.Forest.plant
 
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
+
+        if (BuildConfig.DEBUG) {
+            plant(Timber.DebugTree())
+        }
 
         startKoin {
             androidLogger()

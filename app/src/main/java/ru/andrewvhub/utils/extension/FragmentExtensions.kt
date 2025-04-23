@@ -3,15 +3,10 @@ package ru.andrewvhub.utils.extension
 import android.graphics.Color
 import android.view.View.inflate
 import android.view.ViewGroup
-import androidx.annotation.ColorRes
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import ru.andrewvhub.intensivetraining.R
 import ru.andrewvhub.intensivetraining.databinding.ErrorMassageViewBinding
-
-fun Fragment.getColor(@ColorRes colorResId: Int) =
-    ContextCompat.getColor(requireContext(), colorResId)
 
 fun Fragment.showSnackBar(message: String, title: String = getString(R.string.common_error), ) {
     val snackView = inflate(requireContext(), R.layout.error_massage_view, null)

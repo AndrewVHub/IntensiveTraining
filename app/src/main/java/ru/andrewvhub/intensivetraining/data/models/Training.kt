@@ -7,7 +7,7 @@ import ru.andrewvhub.intensivetraining.api.models.response.TrainingType
 
 @Parcelize
 data class Training(
-    val id: Int? = null,
+    val id: Int,
     val title: String? = null,
     val image: String,
     val description: String? = null,

@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.IntensiveTraining" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:windowBackground">@color/background_primary</item>
+        <item name="colorAccent">@color/white</item>
     </style>
 
     <style name="Theme.IntensiveTraining" parent="Base.Theme.IntensiveTraining" >
@@ -28,14 +29,6 @@
 
     <!--  Widget Style -->
     <style name="Widget" />
-
-    <style name="Widget.SelectableChips" parent="Widget.MaterialComponents.Chip.Choice">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay12</item>
-        <item name="android:textAppearance">@style/Button_2</item>
-        <item name="ensureMinTouchTargetSize">false</item>
-        <item name="chipBackgroundColor">@color/chip_color_background_state</item>
-        <item name="android:textColor">@color/chip_color_text_state</item>
-    </style>
 
     <style name="Widget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="materialThemeOverlay">@style/ThemeOverlay.IntensiveTraining.TextInputLayout</item>

@@ -32,7 +32,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     private val adapterTrainingCards: Adapter by inject()
 
-
     private val endIconCross by lazy {
         ContextCompat.getDrawable(requireContext(), R.drawable.ic_close_circle)
     }

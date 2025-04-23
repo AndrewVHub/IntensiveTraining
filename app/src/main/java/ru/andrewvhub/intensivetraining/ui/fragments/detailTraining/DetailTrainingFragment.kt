@@ -31,7 +31,7 @@ class DetailTrainingFragment : BaseFragment(R.layout.fragment_detail_training) {
         }
 
         navigateToVideo.setOnThrottleClickListener {
-            viewModel.navigateToVideo()
+            viewModel.navigateToVideo(args.trainingDetail.id)
         }
     }
 }
