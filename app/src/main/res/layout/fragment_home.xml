@@ -37,7 +37,7 @@
                 style="@style/Widget.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Лучше живот от пива, чем горб от работы" />
+                tools:text="Какая то треня" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
@@ -74,7 +74,8 @@
             android:paddingBottom="30dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filterButton" />
+            app:layout_constraintTop_toBottomOf="@+id/filterButton"
+            tools:listitem="@layout/item_training_card"/>
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/loader"

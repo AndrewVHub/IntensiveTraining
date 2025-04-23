@@ -21,10 +21,17 @@ abstract class BaseViewModel : ViewModel(), KoinComponent {
     private val _mainNavigate = SingleLiveEvent<NavDirections>()
     val mainNavigate: LiveData<NavDirections> = _mainNavigate
 
+    private val _navigateUp = SingleLiveEvent<Unit>()
+    val navigateUp: LiveData<Unit> = _navigateUp
+
     fun Throwable.handleThrowable() = resources.getMessageFromThrowable(this)
 
     fun mainNavigate(destination: NavDirections) {
         _mainNavigate.value = destination
+    }
+
+    fun navigateUp() {
+        _navigateUp.value = Unit
     }
 }
 

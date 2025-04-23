@@ -89,9 +89,6 @@ dependencies {
     //Lottie Animation
     implementation(libs.lottie.animation)
 
-    //Charts
-    implementation(libs.mp.android.chart)
-
     //Gson
     implementation(libs.gson)
 
@@ -108,4 +105,8 @@ dependencies {
 
     //SwipeRefreshLayout
     implementation(libs.androidx.swipeRefreshLayout)
+
+    //Media ExoPlayer
+    implementation(libs.media3.exoplayer)
+    implementation(libs.media3.ui)
 }

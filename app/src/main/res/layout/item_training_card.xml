@@ -104,5 +104,4 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/space_common_side" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,4 +5,4 @@
     style="@style/Widget.RadioButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:text="Мужской" />
+    tools:text="Какая то треня" />

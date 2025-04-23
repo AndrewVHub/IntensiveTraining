@@ -18,12 +18,12 @@ timber = "5.0.1"
 recyclerView = "1.4.0"
 coreAnimation = "1.0.0"
 lottieVersion = "6.6.0"
-mpAndroidChart = "v3.1.0"
 gson = "2.10.1"
 swipeRefresh = "1.2.0-beta01"
 retrofit = "2.9.0"
 logging-interceptor = "4.12.0"
 chucker = "4.0.0"
+exoplayer = "1.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -62,14 +62,14 @@ timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 lottie-animation = { module = "com.airbnb.android:lottie", version.ref = "lottieVersion"}
 
-mp-android-chart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpAndroidChart"}
-
 gson = { module = "com.google.code.gson:gson", version.ref = "gson"}
 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logging-interceptor" }
 
+media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "exoplayer" }
+media3-ui = { module = "androidx.media3:media3-ui", version.ref = "exoplayer" }
 
 
 [plugins]
