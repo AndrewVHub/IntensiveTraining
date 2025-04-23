@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/trainingImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/template_training_icon" />
+
+        <View
+            android:id="@+id/shadow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/half_black"
+            app:layout_constraintBottom_toBottomOf="@id/trainingImage"
+            app:layout_constraintEnd_toEndOf="@id/trainingImage"
+            app:layout_constraintStart_toStartOf="@id/trainingImage"
+            app:layout_constraintTop_toTopOf="@id/trainingImage" />
+
+        <TextView
+            android:id="@+id/trainingTitle"
+            style="@style/Headline_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/trainingImage"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            tools:text="Бегит атжумания прес качат" />
+
+        <View
+            android:id="@+id/shadowButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_detail_image_training_bottom"
+            app:layout_constraintBottom_toBottomOf="@id/trainingImage"
+            app:layout_constraintTop_toBottomOf="@id/trainingTitle" />
+
+        <ImageView
+            android:id="@+id/iconTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:src="@drawable/ic_time"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/trainingImage"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/timeValue"
+            style="@style/Subtitle_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/spacing_extra_small"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/iconTime"
+            app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+            app:layout_constraintStart_toEndOf="@id/iconTime"
+            app:layout_constraintTop_toTopOf="@+id/iconTime"
+            tools:text="59 мин" />
+
+        <ImageView
+            android:id="@+id/navigateToVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            app:layout_constraintBottom_toBottomOf="@id/trainingImage"
+            app:layout_constraintEnd_toEndOf="@id/trainingImage"
+            app:layout_constraintStart_toStartOf="@id/trainingImage"
+            app:layout_constraintTop_toTopOf="@id/trainingImage"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iconType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:src="@drawable/ic_type"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/iconTime"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/typeValue"
+            style="@style/Subtitle_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/spacing_extra_small"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/iconType"
+            app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+            app:layout_constraintStart_toEndOf="@id/iconType"
+            app:layout_constraintTop_toTopOf="@+id/iconType"
+            tools:text="Кардио" />
+
+        <TextView
+            android:id="@+id/trainingDescription"
+            style="@style/Subtitle_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@id/iconType"
+            tools:text="Укрепляем позвоночник для красивой осанки. Также уделим внимание коленям и голеностопу." />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/space_common_side" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/space_common_side" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

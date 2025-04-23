@@ -88,7 +88,7 @@ class HomeViewModel(
         time = resources.getString(R.string.common_training_min, duration),
         image = image,
         onClick = {
-
+            navigateToDetailTraining(this)
         }
     )
 
@@ -97,6 +97,12 @@ class HomeViewModel(
             HomeFragmentDirections.actionHomeFragmentToSelectFilterBottomSheetFragment(
                 _selectedTypeFlow.value
             )
+        )
+    }
+
+    fun navigateToDetailTraining(training: Training) {
+        mainNavigate(
+            HomeFragmentDirections.actionHomeFragmentToDetailTrainingFragment(training)
         )
     }
 }
