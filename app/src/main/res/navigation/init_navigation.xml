@@ -14,6 +14,10 @@
             android:id="@+id/action_homeFragment_to_selectFilterBottomSheetFragment"
             app:destination="@id/selectFilterBottomSheetFragment"
             app:enterAnim="@anim/nav_default_pop_enter_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailTrainingFragment"
+            app:destination="@id/detailTrainingFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim" />
     </fragment>
     <dialog
         android:id="@+id/selectFilterBottomSheetFragment"
@@ -24,4 +28,13 @@
             android:name="selectedFilter"
             app:argType="string" />
     </dialog>
+    <fragment
+        android:id="@+id/detailTrainingFragment"
+        android:name="ru.andrewvhub.intensivetraining.ui.fragments.detailTraining.DetailTrainingFragment"
+        android:label="fragment_detail_training"
+        tools:layout="@layout/fragment_detail_training" >
+        <argument
+            android:name="trainingDetail"
+            app:argType="ru.andrewvhub.intensivetraining.data.models.Training" />
+    </fragment>
 </navigation>
